@@ -22,7 +22,7 @@ class QL:
        if s in self.policy:
            return self.policy[s]
        else:
-           self.policy[s] = np.random.randint(0,self.legal_actions)
+           self.policy[s] = self.actions[np.random.randint(0,self.legal_actions)]
        return self.policy[s]
    def learn(self,s,a,s1,r,done):
        if done== False:
